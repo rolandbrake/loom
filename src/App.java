@@ -1,17 +1,24 @@
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class App {
     /**
-     * Example usage of the Loom class.
-     *
-     * Creates a Loom object with the given code string, and then calls
-     * the interpret method to execute the code.
-     *
-     * @param args command line arguments (not used)
-     * @throws Exception if an error occurs during execution
+     * Runs Loom code loaded from a file in the examples folder.
+     * 
+     * @param args Command line arguments (not used).
+     * @throws Exception If reading the file or execution fails.
      */
     public static void main(String[] args) throws Exception {
-        String code = "+{?x.+31[>?x.<[>+<-]>-]v>+}";
-        Loom loom = new Loom(code);
-        loom.interpret();
+        // Path to the Loom code file
+        String path = "../examples/rand.lm";
 
+        // Read all bytes and convert to string
+        String code = new String(Files.readAllBytes(Paths.get(path)));
+
+        // Create Loom instance with code string
+        Loom loom = new Loom(code);
+
+        // Interpret the code
+        loom.interpret();
     }
 }

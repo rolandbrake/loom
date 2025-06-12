@@ -29,14 +29,14 @@ Unlike traditional esolangs, Loom **unifies code, memory, and screen into one fa
 | `<`      | Move cursor **left**  go to the end of  the line if less than zero          |
 | `^`      | Move cursor **up**    go to the end of the column if less than zero         |
 | `v`      | Move cursor **down**  go back to the top if screen size exceeded            |
-| `+`      | Increment current cell (wraps at 255)                                       |
+| `+`      | Increment current cell (wraps at 32)                                        |
 | `-`      | Decrement current cell (wraps at 0)                                         |
 | `o`      | return back to the original cell grid[0, 0]                                 |
 | `x`      | display the content of the current cell to the screen                       |
 | `*`      | for debugging display usful information for the current cell                |
-| `?`      | Set current cell to a **random** number from 0–255                          |
+| `?`      | Set current cell to a **random** number from 0–32                           |
 | `{}` `[]` `()` | **Loop**: repeat enclosed code block while cell ≠ 0                   |
-| `'`...`'` | Quoted strings — used in comments or to escape special symbols              |
+| `'`...`'` | Quoted strings — used in comments or to escape special symbols             |
 
 **Repeat counts**: Any movement or arithmetic operator can be followed by a number (e.g., `+12`, `>5`) for efficiency.
 
