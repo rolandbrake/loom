@@ -1,0 +1,15 @@
+---
+
+### ✅ **3. Add a `.gitignore`**
+
+A typical Java `.gitignore` might look like:
+
+```gitignore
+*.class
+*.log
+*.jar
+*.iml
+.idea/
+.vscode/
+bin/
+lib/
